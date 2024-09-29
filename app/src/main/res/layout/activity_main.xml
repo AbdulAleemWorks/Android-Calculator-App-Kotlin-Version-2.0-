@@ -109,78 +109,74 @@
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.25" />
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/first_button_row"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/fully_tp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@+id/guideline_top_button_row"
-        app:layout_constraintTop_toBottomOf="@+id/guideline_display_bottom"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/guideline_display_bottom">
 
         <Button
             android:id="@+id/button7"
-            android:onClick="numberAction"
             android:layout_width="101dp"
             android:layout_height="101dp"
             android:background="@drawable/square_button_background"
+            android:onClick="numberAction"
             android:text="7"
             android:textColor="@color/white"
             android:textSize="60sp"
-            app:layout_constraintBottom_toTopOf="@+id/guideline_top_button_row"
-            app:layout_constraintEnd_toEndOf="@id/guideline_ltr_first_button_collumn"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/button8"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/guideline_display_bottom"
-            >
-        </Button>
+            app:layout_constraintTop_toTopOf="parent"/>
+
         <Button
             android:id="@+id/button8"
-            android:onClick="numberAction"
             android:layout_width="101dp"
             android:layout_height="101dp"
             android:background="@drawable/square_button_background"
+            android:onClick="numberAction"
             android:text="8"
             android:textColor="@color/white"
             android:textSize="60sp"
-            app:layout_constraintBottom_toTopOf="@+id/guideline_top_button_row"
-            app:layout_constraintEnd_toEndOf="@id/guideline_ltr_second_button_collumn"
-            app:layout_constraintStart_toStartOf="@id/guideline_ltr_first_button_collumn"
-            app:layout_constraintTop_toBottomOf="@+id/guideline_display_bottom"
-            >
-        </Button>
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/button9"
+            app:layout_constraintStart_toEndOf="@id/button7"
+            app:layout_constraintTop_toTopOf="parent"/>
+
         <Button
             android:id="@+id/button9"
-            android:onClick="numberAction"
             android:layout_width="101dp"
             android:layout_height="101dp"
             android:background="@drawable/square_button_background"
+            android:onClick="numberAction"
             android:text="9"
             android:textColor="@color/white"
             android:textSize="60sp"
-            app:layout_constraintBottom_toTopOf="@+id/guideline_top_button_row"
-            app:layout_constraintEnd_toEndOf="@id/guideline_ltr_third_button_collumn"
-            app:layout_constraintStart_toStartOf="@id/guideline_ltr_second_button_collumn"
-            app:layout_constraintTop_toBottomOf="@+id/guideline_display_bottom"
-            >
-        </Button>
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/button_plus"
+            app:layout_constraintStart_toEndOf="@+id/button8"
+            app:layout_constraintTop_toTopOf="parent"/>
+
         <Button
             android:id="@+id/button_plus"
-            android:onClick="operationAction"
             android:layout_width="101dp"
             android:layout_height="101dp"
             android:background="@drawable/square_button_background"
+            android:onClick="operationAction"
             android:text="+"
             android:textColor="@color/white"
             android:textSize="60sp"
-            app:layout_constraintBottom_toTopOf="@+id/guideline_top_button_row"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@id/guideline_ltr_third_button_collumn"
-            app:layout_constraintTop_toBottomOf="@+id/guideline_display_bottom"
-            >
-        </Button>
-    </LinearLayout>
+            app:layout_constraintStart_toEndOf="@+id/button9"
+            app:layout_constraintTop_toTopOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_top_button_row"
@@ -189,78 +185,74 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.55" />
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/second_button_row"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/fully_tp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@+id/guideline_second_button_row"
-        app:layout_constraintTop_toBottomOf="@+id/guideline_top_button_row"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/guideline_top_button_row">
 
         <Button
             android:id="@+id/button4"
-            android:onClick="numberAction"
             android:layout_width="101dp"
             android:layout_height="101dp"
             android:background="@drawable/square_button_background"
+            android:onClick="numberAction"
             android:text="4"
             android:textColor="@color/white"
             android:textSize="60sp"
-            app:layout_constraintBottom_toTopOf="@+id/guideline_second_button_row"
-            app:layout_constraintEnd_toEndOf="@id/guideline_ltr_first_button_collumn"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/button5"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/guideline_top_button_row"
-            >
-        </Button>
+            app:layout_constraintTop_toTopOf="parent"/>
+
         <Button
             android:id="@+id/button5"
-            android:onClick="numberAction"
             android:layout_width="101dp"
             android:layout_height="101dp"
             android:background="@drawable/square_button_background"
+            android:onClick="numberAction"
             android:text="5"
             android:textColor="@color/white"
             android:textSize="60sp"
-            app:layout_constraintBottom_toTopOf="@+id/guideline_second_button_row"
-            app:layout_constraintEnd_toEndOf="@id/guideline_ltr_second_button_collumn"
-            app:layout_constraintStart_toStartOf="@id/guideline_ltr_first_button_collumn"
-            app:layout_constraintTop_toBottomOf="@+id/guideline_top_button_row"
-            >
-        </Button>
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/button6"
+            app:layout_constraintStart_toEndOf="@id/button4"
+            app:layout_constraintTop_toTopOf="parent"/>
+
         <Button
             android:id="@+id/button6"
-            android:onClick="numberAction"
             android:layout_width="101dp"
             android:layout_height="101dp"
             android:background="@drawable/square_button_background"
+            android:onClick="numberAction"
             android:text="6"
             android:textColor="@color/white"
             android:textSize="60sp"
-            app:layout_constraintBottom_toTopOf="@+id/guideline_second_button_row"
-            app:layout_constraintEnd_toEndOf="@id/guideline_ltr_third_button_collumn"
-            app:layout_constraintStart_toStartOf="@id/guideline_ltr_second_button_collumn"
-            app:layout_constraintTop_toBottomOf="@+id/guideline_top_button_row"
-            >
-        </Button>
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/button_minus"
+            app:layout_constraintStart_toEndOf="@id/button5"
+            app:layout_constraintTop_toTopOf="parent"/>
+
         <Button
             android:id="@+id/button_minus"
-            android:onClick="operationAction"
             android:layout_width="101dp"
             android:layout_height="101dp"
             android:background="@drawable/square_button_background"
+            android:onClick="operationAction"
             android:text="-"
             android:textColor="@color/white"
             android:textSize="60sp"
-            app:layout_constraintBottom_toTopOf="@+id/guideline_second_button_row"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@id/guideline_ltr_third_button_collumn"
-            app:layout_constraintTop_toBottomOf="@+id/guideline_top_button_row"
-            >
-        </Button>
-    </LinearLayout>
+            app:layout_constraintStart_toEndOf="@id/button6"
+            app:layout_constraintTop_toTopOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_second_button_row"
@@ -269,78 +261,75 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.7" />
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/third_button_row"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/fully_tp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@+id/guideline_third_button_row"
-        app:layout_constraintTop_toBottomOf="@+id/guideline_second_button_row"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/guideline_second_button_row">
 
         <Button
             android:id="@+id/button1"
-            android:onClick="numberAction"
             android:layout_width="101dp"
             android:layout_height="101dp"
             android:background="@drawable/square_button_background"
+            android:onClick="numberAction"
             android:text="1"
             android:textColor="@color/white"
             android:textSize="60sp"
-            app:layout_constraintBottom_toTopOf="@+id/guideline_third_button_row"
-            app:layout_constraintEnd_toEndOf="@id/guideline_ltr_first_button_collumn"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/button2"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/guideline_second_button_row"
-            >
-        </Button>
+
+            app:layout_constraintTop_toTopOf="parent" />
+
         <Button
             android:id="@+id/button2"
-            android:onClick="numberAction"
             android:layout_width="101dp"
             android:layout_height="101dp"
             android:background="@drawable/square_button_background"
+            android:onClick="numberAction"
             android:text="2"
             android:textColor="@color/white"
             android:textSize="60sp"
-            app:layout_constraintBottom_toTopOf="@+id/guideline_third_button_row"
-            app:layout_constraintEnd_toEndOf="@id/guideline_ltr_second_button_collumn"
-            app:layout_constraintStart_toStartOf="@id/guideline_ltr_first_button_collumn"
-            app:layout_constraintTop_toBottomOf="@+id/guideline_second_button_row"
-            >
-        </Button>
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/button3"
+            app:layout_constraintStart_toEndOf="@id/button1"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <Button
             android:id="@+id/button3"
-            android:onClick="numberAction"
             android:layout_width="101dp"
             android:layout_height="101dp"
             android:background="@drawable/square_button_background"
+            android:onClick="numberAction"
             android:text="3"
             android:textColor="@color/white"
             android:textSize="60sp"
-            app:layout_constraintBottom_toTopOf="@+id/guideline_third_button_row"
-            app:layout_constraintEnd_toEndOf="@id/guideline_ltr_third_button_collumn"
-            app:layout_constraintStart_toStartOf="@id/guideline_ltr_second_button_collumn"
-            app:layout_constraintTop_toBottomOf="@+id/guideline_second_button_row"
-            >
-        </Button>
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/button_multiply"
+            app:layout_constraintStart_toEndOf="@id/button2"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <Button
             android:id="@+id/button_multiply"
-            android:onClick="operationAction"
             android:layout_width="101dp"
             android:layout_height="101dp"
             android:background="@drawable/square_button_background"
+            android:onClick="operationAction"
             android:text="x"
             android:textColor="@color/white"
             android:textSize="60sp"
-            app:layout_constraintBottom_toTopOf="@+id/guideline_third_button_row"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@id/guideline_ltr_third_button_collumn"
-            app:layout_constraintTop_toBottomOf="@+id/guideline_second_button_row"
-            >
-        </Button>
-    </LinearLayout>
+            app:layout_constraintStart_toEndOf="@id/button3"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_third_button_row"
@@ -349,78 +338,82 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.85" />
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/fourth_button_row"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/fully_tp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/guideline_third_button_row"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/guideline_third_button_row">
 
         <Button
             android:id="@+id/buttonAC"
-            android:onClick="allClearAction"
             android:layout_width="101dp"
             android:layout_height="101dp"
             android:background="@drawable/square_button_background"
+            android:onClick="allClearAction"
             android:text="AC"
             android:textColor="@color/white"
             android:textSize="39sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@id/guideline_ltr_first_button_collumn"
+            app:layout_constraintEnd_toStartOf="@id/button0"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/guideline_third_button_row"
-            >
+            app:layout_constraintTop_toTopOf="parent">
+
         </Button>
+
         <Button
             android:id="@+id/button0"
-            android:onClick="numberAction"
             android:layout_width="101dp"
             android:layout_height="101dp"
             android:background="@drawable/square_button_background"
+            android:onClick="numberAction"
             android:text="0"
             android:textColor="@color/white"
             android:textSize="60sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@id/guideline_ltr_second_button_collumn"
-            app:layout_constraintStart_toStartOf="@id/guideline_ltr_first_button_collumn"
-            app:layout_constraintTop_toBottomOf="@+id/guideline_third_button_row"
-            >
+            app:layout_constraintEnd_toStartOf="@id/button_equals"
+            app:layout_constraintStart_toEndOf="@id/buttonAC"
+            app:layout_constraintTop_toTopOf="parent">
+
         </Button>
+
         <Button
             android:id="@+id/button_equals"
-            android:onClick="equalsAction"
             android:layout_width="101dp"
             android:layout_height="101dp"
             android:background="@drawable/square_button_background"
+            android:onClick="equalsAction"
             android:text="="
             android:textColor="@color/white"
             android:textSize="60sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@id/guideline_ltr_third_button_collumn"
-            app:layout_constraintStart_toStartOf="@id/guideline_ltr_second_button_collumn"
-            app:layout_constraintTop_toBottomOf="@+id/guideline_third_button_row"
-            >
+            app:layout_constraintEnd_toStartOf="@id/button_divide"
+            app:layout_constraintStart_toEndOf="@id/button0"
+            app:layout_constraintTop_toTopOf="parent">
+
         </Button>
+
         <Button
             android:id="@+id/button_divide"
-            android:onClick="operationAction"
             android:layout_width="101dp"
             android:layout_height="101dp"
             android:background="@drawable/square_button_background"
+            android:onClick="operationAction"
             android:text="/"
             android:textColor="@color/white"
             android:textSize="60sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@id/guideline_ltr_third_button_collumn"
-            app:layout_constraintTop_toBottomOf="@+id/guideline_third_button_row"
-            >
+            app:layout_constraintStart_toEndOf="@id/button_equals"
+            app:layout_constraintTop_toTopOf="parent">
+
         </Button>
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_ltr_second_button_collumn"

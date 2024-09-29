@@ -350,19 +350,33 @@
         app:layout_constraintTop_toBottomOf="@+id/guideline_third_button_row">
 
         <Button
+            android:id="@+id/button_backspace"
+            android:layout_width="101dp"
+            android:layout_height="50dp"
+            android:background="@drawable/square_button_background"
+            android:onClick="backSpaceAction"
+            android:text="⌫"
+            android:textColor="@color/white"
+            android:textSize="27sp"
+            app:layout_constraintBottom_toTopOf="@id/buttonAC"
+            app:layout_constraintEnd_toStartOf="@id/button0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <Button
             android:id="@+id/buttonAC"
             android:layout_width="101dp"
-            android:layout_height="101dp"
+            android:layout_height="50dp"
             android:background="@drawable/square_button_background"
             android:onClick="allClearAction"
             android:text="AC"
             android:textColor="@color/white"
-            android:textSize="39sp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:textSize="27sp"
             app:layout_constraintEnd_toStartOf="@id/button0"
             app:layout_constraintHorizontal_chainStyle="spread_inside"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toBottomOf="@+id/button_backspace">
 
         </Button>
 

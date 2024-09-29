@@ -13,6 +13,7 @@ import com.example.myapplication.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
+    var equalsWasLast : Boolean = false
 
 
 
@@ -37,11 +38,9 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        //wholeEquation = binding.calcDisplayTV.text.toString()
     }
 //For Performing Each operation on by one
     fun performSingleOperations( num1: Float, num2: Float, operator: Char): Float {
-        println("SingleOperationsStarted")
         return when (operator) {
             '+' -> num1 + num2
             '-' -> num1 - num2
@@ -103,6 +102,16 @@ After operation is performed result is being saved back in the list and the oper
             lastPressedWasOperator = true
         }
     }
+    fun backSpaceAction(view: View){
+        if(equalsWasLast){
+            wholeEquation = binding.equationTV.text.toString()
+            equalsWasLast = false
+        }
+        if (wholeEquation.isNotEmpty()) {
+            wholeEquation = wholeEquation.substring(0, wholeEquation.length - 1)
+        }
+        binding.calcDisplayTV.text = wholeEquation
+    }
 
 //On pressing Equals Button the whole equation is parsed into numbers and operators and stored in lists
     fun equalsAction(view: View) {
@@ -153,6 +162,7 @@ After operation is performed result is being saved back in the list and the oper
         else{
             Toast.makeText(this, "Please perform a right calculation", Toast.LENGTH_SHORT).show()
         }
+        equalsWasLast = true
     }
 
     fun allClearAction(view: View){
@@ -162,6 +172,7 @@ After operation is performed result is being saved back in the list and the oper
         binding.calcDisplayTV.text = "0"
         binding.equationTV.text = ""
     }
+
 
 
 }
